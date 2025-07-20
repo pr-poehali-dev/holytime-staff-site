@@ -9,7 +9,7 @@ const Index = () => {
       nickname: "CyberKnight",
       rank: "Team Lead",
       timeInTeam: "2 года 4 месяца",
-      avatar: "👑",
+      avatar: "",
       status: "online",
       projects: 12
     },
@@ -17,7 +17,7 @@ const Index = () => {
       nickname: "DataWizard",
       rank: "Senior Developer",
       timeInTeam: "1 год 8 месяцев",
-      avatar: "🧙‍♂️",
+      avatar: "",
       status: "online",
       projects: 8
     },
@@ -25,7 +25,7 @@ const Index = () => {
       nickname: "CodePhoenix",
       rank: "Full Stack Dev",
       timeInTeam: "1 год 2 месяца",
-      avatar: "🔥",
+      avatar: "",
       status: "away",
       projects: 6
     },
@@ -33,7 +33,7 @@ const Index = () => {
       nickname: "PixelMaster",
       rank: "UI/UX Designer",
       timeInTeam: "10 месяцев",
-      avatar: "🎨",
+      avatar: "",
       status: "online",
       projects: 4
     },
@@ -41,7 +41,7 @@ const Index = () => {
       nickname: "BugHunter",
       rank: "QA Engineer",
       timeInTeam: "8 месяцев",
-      avatar: "🐛",
+      avatar: "",
       status: "offline",
       projects: 3
     },
@@ -49,7 +49,7 @@ const Index = () => {
       nickname: "CloudRunner",
       rank: "DevOps Engineer",
       timeInTeam: "6 месяцев",
-      avatar: "☁️",
+      avatar: "",
       status: "online",
       projects: 2
     }
@@ -127,7 +127,9 @@ const Index = () => {
               <Card key={member.nickname} className="group hover:shadow-lg transition-all duration-300 animate-scale-in border-border/50 hover:border-primary/50 w-64 flex-shrink-0">
                 <CardHeader className="text-center pb-4">
                   <div className="relative inline-block mb-4">
-                    <div className="text-4xl mb-2">{member.avatar}</div>
+                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-2">
+                      <Icon name="User" size={24} className="text-muted-foreground" />
+                    </div>
                     <div className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full border-2 border-card ${getStatusColor(member.status)}`}></div>
                   </div>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
