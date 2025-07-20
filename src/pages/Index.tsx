@@ -122,9 +122,9 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
             {teamMembers.map((member, index) => (
-              <Card key={member.nickname} className="group hover:shadow-lg transition-all duration-300 animate-scale-in border-border/50 hover:border-primary/50">
+              <Card key={member.nickname} className="group hover:shadow-lg transition-all duration-300 animate-scale-in border-border/50 hover:border-primary/50 w-64 flex-shrink-0">
                 <CardHeader className="text-center pb-4">
                   <div className="relative inline-block mb-4">
                     <div className="text-4xl mb-2">{member.avatar}</div>
